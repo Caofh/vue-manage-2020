@@ -1,0 +1,118 @@
+
+
+body.lite-manage-theme-bw {
+  filter: grayscale(100%);
+}
+
+
+
+
+blockquote {
+  border-left: 4px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 0;
+  padding-left: 16px;
+}
+pre {
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow: visible;
+
+  white-space: pre-wrap;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+
+  border-radius: 3px;
+}
+
+.filter-gray {
+  // filter: grayscale(100%);
+  color: #ccc !important;
+  div, p, span, a {
+    color: #ccc !important;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.stopScroll {
+  overflow: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+/*安全区适配start*/
+/*//iphoneX、iphoneXs*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .fix-bottom {
+    box-sizing: border-box;
+    padding-bottom: px(26) !important;
+  }
+
+  .fix-top {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top) !important;
+  }
+}
+/*//iphone Xs Max*/
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:3) {
+  .fix-bottom {
+    box-sizing: border-box;
+    padding-bottom: px(26) !important;
+  }
+
+  .fix-top {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top) !important;
+  }
+}
+/*//iphone XR*/
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:2) {
+  .fix-bottom {
+    box-sizing: border-box;
+    padding-bottom: px(26) !important;
+  }
+
+  .fix-top {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top) !important;
+  }
+}
+
+/*自定义1px像素边框(利用变换的缩放属性)*/
+.line-1px-demo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: px(-670);
+  width: px(1340);
+  height: 1px;
+  background: #EFF0F1;
+  transform: scale(.5);
+}
+
+/*修改input的placeholder文字样式方法*/
+// input::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+//   font-size: 14px;
+//   color: #8F959E;
+// }
+// input::-moz-placeholder { /* Firefox 19+ */  
+//   font-size: 14px;
+//   color: #8F959E;
+// }
+// input::-ms-input-placeholder { /* IE 10+ */ 
+//   font-size: 14px;
+//   color: #8F959E;
+// }
+// input::-moz-placeholder { /* Firefox 18- */ 
+//   font-size: 14px;
+//   color: #8F959E;
+// }
+
+
