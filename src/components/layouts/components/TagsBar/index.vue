@@ -182,7 +182,6 @@
         }
       },
       async refreshRoute() {
-        // this.$baseEventBus.$emit("reloadRouterView");
         window.location.reload()
       },
       async closeOthersTags() {

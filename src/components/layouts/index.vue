@@ -1,7 +1,7 @@
 <template>
   <div class="vue-admin-beautiful-wrapper" :class="classObj">
     <div
-      v-if="'horizontal' === layout"
+      v-if="'horizontal' === layout || false"
       class="layout-container-horizontal"
       :class="{
         fixed: header === 'fixed',
@@ -21,7 +21,6 @@
       </div>
 
       <div class="vab-main main-padding">
-        <ad></ad>
         <app-main></app-main>
       </div>
     </div>
@@ -53,8 +52,6 @@
           
         </div>
 
-        <!-- <ad></ad> -->
-
         <!-- 页面主内容 -->
         <app-main></app-main>
       </div>
@@ -66,12 +63,11 @@
 </template>
 
 <script>
-import { Ad, AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
+import { AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
 import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Layout",
   components: {
-    Ad,
     TopBar,
     NavBar, // 顶部menu
     SideBar, // 侧边栏

@@ -65,8 +65,10 @@
           null,
           async () => {
 
-            let logoutUrl = gateWay.host + '/logout'
-            goPage(logoutUrl)
+            console.log('退出登陆')
+
+            // let logoutUrl = gateWay.host + '/logout'
+            // goPage(logoutUrl)
 
           }
         );

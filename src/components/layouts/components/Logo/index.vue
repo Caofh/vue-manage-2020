@@ -1,6 +1,7 @@
 <template>
   <div :class="'logo-container-' + layout">
     <router-link to="/">
+      <!-- <vab-remix-icon v-if="logo" class="logo" :icon-class="logo" /> -->
       <img class="bar-icon logo" src="@/assets/img/common/logo.png">
       <span
         class="title"
@@ -14,16 +15,18 @@
 </template>
 <script>
   import { mapGetters } from "vuex";
+  import { logo, title } from "@/config/settings";
 
   export default {
     name: "Logo",
     data() {
       return {
-        title: this.$baseTitle,
+        title: title,
       };
     },
     computed: {
       ...mapGetters({
+        logo: "logo",
         layout: "layout",
       }),
     },

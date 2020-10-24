@@ -31,7 +31,6 @@
 <script>
   import { VabKeel, VabKeelHeading, VabKeelText } from "./components/vabKeel";
   import { mapGetters } from "vuex";
-  // import GithubCorner from "../GithubCorner";
 
   export default {
     name: "AppMain",
@@ -45,7 +44,6 @@
         show: false,
         fullYear: new Date().getFullYear(),
         routerView: true,
-        // githubCorner,
         
         newPage: true, // 新页面显示标识
 
@@ -87,27 +85,12 @@
       },
     },
     created() {
-      //重载所有路由
-      this.$baseEventBus.$on("reloadRouterView", () => {
-        this.routerView = false;
-        this.$nextTick(() => {
-          this.routerView = true;
-          this.handleSkeleton();
-        });
-      });
+
     },
     mounted() {
-      this.handleSkeleton();
     },
     methods: {
-      handleSkeleton() {
-        if (this.skeleton) {
-          this.show = true;
-          setTimeout(() => {
-            this.show = false;
-          }, 200);
-        }
-      },
+      
     },
   };
 </script>

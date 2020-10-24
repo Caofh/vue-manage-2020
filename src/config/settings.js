@@ -12,7 +12,7 @@ module.exports = {
   // 是否显示在页面高亮错误
   errorLog: ["development", "test", "production"],
   // 项目标题
-  title: "lite-manage",
+  title: "项目demo",
   // 加载时显示文字
   loadingText: "正在加载中...",
   // 消息框消失时间

@@ -13,26 +13,6 @@ Vue.use(ElementUI, {
 });
 
 
-// 各种第三方插件
-import Vab from "@/utils/extra/vab";
-// import { VabDrag, VabPermissions, VabQueryForm } from "@/components/layouts/components";
-// import VabCount from "zx-count";
-Vue.use(Vab);
-// Vue.use(VabDrag);
-// Vue.use(VabPermissions);
-// Vue.use(VabQueryForm);
-// Vue.use(VabCount);
-
-
-// // vue组件
-// import VabIcon from "zx-icon";
-import { ColorfullIcon } from "@/components/layouts/components";
-import { RemixIcon } from "@/components/layouts/components";
-// Vue.component("vab-icon", VabIcon);
-Vue.component("vab-colorful-icon", ColorfullIcon);
-Vue.component("vab-remix-icon", RemixIcon);
-
-
 // 自定义组件
 import 'normalize.css'; // 引用基础兼容性css，normalize.css；文档：https://github.com/necolas/normalize.css
 import './assets/css/style/index.scss'; // 引用全局样式类

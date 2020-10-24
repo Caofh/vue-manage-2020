@@ -26,8 +26,6 @@
         </el-col>
         <el-col :xl="5" :lg="5" :md="5" :sm="5" :xs="5">
           <div class="right-panel">
-            <error-log />
-            <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
             <theme-bar class="hidden-md-and-down"></theme-bar>
             
             <avatar></avatar>
@@ -44,8 +42,6 @@
   import { mapGetters } from "vuex";
   import {
     Avatar,
-    ErrorLog,
-    FullScreenBar,
     Logo,
     ThemeBar,
   } from "@/components/layouts/components";
@@ -53,8 +49,6 @@
   export default {
     components: {
       Avatar,
-      ErrorLog,
-      FullScreenBar,
       ThemeBar,
       SideBarItem,
       Logo,
@@ -83,13 +77,7 @@
       },
     },
     methods: {
-      async refreshRoute() {
-        this.$baseEventBus.$emit("reloadRouterView");
-        this.pulse = true;
-        setTimeout(() => {
-          this.pulse = false;
-        }, 1000);
-      },
+      
     },
   };
 </script>

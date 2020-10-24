@@ -14,14 +14,7 @@
       </el-col>
       <el-col :xs="20" :sm="12" :md="12" :lg="12" :xl="12">
         <div class="right-panel">
-          <error-log></error-log>
-          <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar class="hidden-xs-only"></theme-bar>
-          <!-- <i
-            :class="['el-icon-refresh']"
-            style="font-size: 20px;"
-            @click="refreshRoute"
-          ></i> -->
           
           <avatar></avatar>
 
@@ -37,8 +30,6 @@
   import {
     Avatar,
     Breadcrumb,
-    ErrorLog,
-    FullScreenBar,
     ThemeBar,
   } from "@/components/layouts/components";
 
@@ -47,8 +38,6 @@
     components: {
       Avatar,
       Breadcrumb,
-      ErrorLog,
-      FullScreenBar,
       ThemeBar,
     },
     data() {
@@ -68,13 +57,7 @@
       handleCollapse() {
         this.$store.dispatch("changeCollapse");
       },
-      async refreshRoute() {
-        this.$baseEventBus.$emit("reloadRouterView");
-        this.pulse = true;
-        setTimeout(() => {
-          this.pulse = false;
-        }, 1000);
-      },
+      
     },
   };
 </script>
